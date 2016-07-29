@@ -21,8 +21,8 @@ public class Root {
     @Module
     public static class RootModule {
         @Provides
-        NetworkClient<DataStore> provideGeneric() {
-            return new NetworkClient<>();
+        DataStoreNetworkClient provideGeneric() {
+            return new DataStoreNetworkClient();
         }
     }
 }

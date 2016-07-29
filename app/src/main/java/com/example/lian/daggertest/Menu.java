@@ -8,7 +8,7 @@ import dagger.Provides;
 
 public class Menu {
     @Inject
-    NetworkClient<DataStore> genericType;
+    DataStoreNetworkClient genericType;
     @Inject
     DataStore riderData;
 
@@ -32,7 +32,7 @@ public class Menu {
     @Module
     public static class TestModule {
         @Provides
-        DataStore provideType(NetworkClient<DataStore> generic) {
+        DataStore provideType(DataStoreNetworkClient generic) {
             return new DataStore();
         }
 

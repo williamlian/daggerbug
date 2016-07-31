@@ -12,17 +12,19 @@ public class Root {
                 .rootModule(new RootModule())
                 .build();
 
-        Menu menu = new Menu(rootComponent);
+        Main main = new Main(rootComponent);
     }
 
     @Component(modules = RootModule.class)
-    public interface RootComponent extends Menu.ParentComponent {}
+    public interface RootComponent extends Main.ParentComponent {
+
+    }
 
     @Module
     public static class RootModule {
         @Provides
-        DataStoreNetworkClient provideGeneric() {
-            return new DataStoreNetworkClient();
+        NetworkClient<DataStore> provideGeneric() {
+            return new NetworkClient<DataStore>();
         }
     }
 }

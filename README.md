@@ -13,6 +13,9 @@ Dependency Setting
 
 Problem Detail
 --------------
+
+[Code](https://github.com/williamlian/daggerbug/blob/master/app/src/main/java/com/example/lian/daggertest/Main.java#L21)
+
 In class Main, in order to provide correct component to MenuManager, the MainComponent has extended the MenuManger.ParentCompoent.
 Logically, to ensure component is passed from upper owner (Root here), we will want to make Main.ParentComponent to extend
 MenuManager.ParentComponent as well.

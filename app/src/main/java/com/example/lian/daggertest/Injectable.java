@@ -1,3 +1,3 @@
 package com.example.lian.daggertest;
 
-public class DataStore {}
+public class Injectable {}

@@ -26,6 +26,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.1.1'
 
     // Dagger 2 and Compiler
-    compile 'com.google.dagger:dagger:2.2'
-    apt "com.google.dagger:dagger-compiler:2.2"
+    compile 'com.google.dagger:dagger:2.5'
+    apt "com.google.dagger:dagger-compiler:2.5"
 }

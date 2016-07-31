@@ -4,27 +4,20 @@ import dagger.Component;
 import dagger.Module;
 import dagger.Provides;
 
+/**
+ * Injectable is provided in Root.
+ */
 public class Root {
-    public RootComponent rootComponent;
-
-    public Root() {
-        rootComponent = DaggerRoot_RootComponent.builder()
-                .rootModule(new RootModule())
-                .build();
-
-        Main main = new Main(rootComponent);
-    }
+    public Root() {}
 
     @Component(modules = RootModule.class)
-    public interface RootComponent extends Main.ParentComponent {
-
-    }
+    public interface RootComponent {}
 
     @Module
     public static class RootModule {
         @Provides
-        NetworkClient<DataStore> provideGeneric() {
-            return new NetworkClient<DataStore>();
+        Injectable provideGeneric() {
+            return new Injectable();
         }
     }
 }

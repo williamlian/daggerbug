@@ -9,7 +9,7 @@ then dagger could not generate code and throw compilation error.
 
 Dependency Setting
 ------------------
-![Dagger Sample.png]
+![Dagger](Dagger Sample.png)
 
 Problem Detail
 --------------
